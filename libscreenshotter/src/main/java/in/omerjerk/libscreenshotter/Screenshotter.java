@@ -12,6 +12,7 @@ import android.media.projection.MediaProjection;
 import android.media.projection.MediaProjectionManager;
 import android.util.Log;
 import android.view.Surface;
+import android.widget.Toast;
 
 import java.nio.ByteBuffer;
 
@@ -63,7 +64,9 @@ public class Screenshotter implements ImageReader.OnImageAvailableListener {
         this.resultCode = resultCode;
         this.data = data;
 
-        Log.d("Test", "screenshot");
+        Toast toast = Toast.makeText(context, "Screenshot", Toast.LENGTH_SHORT);
+        toast.show();
+
 
         imageAvailable = 0;
         // mImageReader = ImageReader.newInstance(width, height, ImageFormat.RGB_565, 2);
