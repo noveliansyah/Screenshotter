@@ -116,7 +116,7 @@ public class Screenshotter implements ImageReader.OnImageAvailableListener {
         int rowStride = planes[0].getRowStride();
         int rowPadding = rowStride - pixelStride * width;
         // create bitmap
-        Bitmap bitmap = Bitmap.createBitmap(width+rowPadding/pixelStride, height, Bitmap.Config.RGB_565);
+        Bitmap bitmap = Bitmap.createBitmap(width+rowPadding/pixelStride, height, Bitmap.Config.ARGB_8888);
         bitmap.copyPixelsFromBuffer(buffer);
         tearDown();
         image.close();
