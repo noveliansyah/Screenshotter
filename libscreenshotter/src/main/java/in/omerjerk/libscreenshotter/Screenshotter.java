@@ -69,8 +69,8 @@ public class Screenshotter implements ImageReader.OnImageAvailableListener {
 
 
         imageAvailable = 0;
-        // mImageReader = ImageReader.newInstance(width, height, ImageFormat.RGB_565, 2);
-        mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
+        mImageReader = ImageReader.newInstance(width, height, ImageFormat.RGB_565, 2);
+        // mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
         MediaProjectionManager mediaProjectionManager = (MediaProjectionManager) context
                 .getSystemService(Context.MEDIA_PROJECTION_SERVICE);
 
