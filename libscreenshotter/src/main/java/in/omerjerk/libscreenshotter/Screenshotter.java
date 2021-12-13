@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.ImageFormat;
+import android.graphics.PixelFormat;
 import android.hardware.display.DisplayManager;
 import android.hardware.display.VirtualDisplay;
 import android.media.Image;
@@ -69,8 +70,8 @@ public class Screenshotter implements ImageReader.OnImageAvailableListener {
 
 
         imageAvailable = 0;
-        mImageReader = ImageReader.newInstance(width, height, ImageFormat.RGB_565, 2);
-        // mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
+        // mImageReader = ImageReader.newInstance(width, height, ImageFormat.RGB_565, 2);
+        mImageReader = ImageReader.newInstance(width, height, PixelFormat.RGBA_8888, 2);
         MediaProjectionManager mediaProjectionManager = (MediaProjectionManager) context
                 .getSystemService(Context.MEDIA_PROJECTION_SERVICE);
 
